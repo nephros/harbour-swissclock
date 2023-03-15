@@ -83,7 +83,7 @@ ClockRenderer::nodeMatrix(
     if (aType == NodeSec) {
         if (!ClockRenderer::SWISS_RAILROAD.isNull()) {
             qreal hilfiker = 58.5;
-            if (aTime.second() + aTime.msec()/1000.0 + 0.5 >= hilfiker ) {
+            if (aTime.second() + aTime.msec()/1000.0 >= hilfiker ) {
                 a = - 90; // wait at 0 a.k.a. 60 a.k.a. 90
             } else { // speed up seconds hand
                 a = 6 * (aTime.second() + aTime.msec()/1000.0)*60/hilfiker - 90;
